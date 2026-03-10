@@ -1,189 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>NÓS 3</title>
 <link href="cora.png" rel="icon">
 
 <style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
 
-body{
-margin:0;
-font-family:'Segoe UI',Arial,sans-serif;
-text-align:center;
-color:white;
-
-background:url(heart.gif) center/cover no-repeat fixed;
+        background: url(heart.gif) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-/* container */
-
-.container{
-max-width:900px;
-margin:40px auto;
-padding:25px;
-
-background:rgba(0,0,0,0.45);
-backdrop-filter:blur(10px);
-
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,0.6);
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
 }
 
-/* titulo */
-
-@font-face{
-font-family:kgt;
-src:url(KGT.otf);
+h1 {
+    margin-bottom: 10px;
 }
 
-.titulo3{
-font-family:kgt;
-font-size:40px;
-letter-spacing:2px;
-margin-bottom:20px;
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
-/* carrossel */
-
-.carousel{
-position:relative;
-overflow:hidden;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.7);
+.carousel img {
+    width: 100%;
+    display: none;
 }
 
-.carousel img{
-width:100%;
-position:absolute;
-left:0;
-top:0;
-opacity:0;
-transition:opacity 1s ease;
-border-radius:15px;
+.carousel img.active {
+    display: block;
 }
 
-.carousel img.active{
-opacity:1;
-position:relative;
+.buttons {
+    margin-top: 10px;
 }
 
-/* botões */
-
-.buttons{
-margin-top:15px;
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
 }
 
-button{
-padding:12px 25px;
-border:none;
-border-radius:30px;
-
-background:linear-gradient(45deg,#ff4d6d,#ff8fa3);
-color:white;
-
-font-size:15px;
-font-weight:bold;
-
-cursor:pointer;
-transition:.3s;
-margin:5px;
+button:hover {
+    background: #555;
 }
 
-button:hover{
-transform:scale(1.08);
-box-shadow:0 8px 20px rgba(0,0,0,0.4);
+.text-box {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    font-size: 18px;
 }
 
-/* texto */
-
-.text-box{
-margin-top:25px;
-
-background:rgba(255,255,255,0.9);
-color:#333;
-
-padding:25px;
-border-radius:15px;
-
-line-height:1.6;
-
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
+strong {
+    color: #ffffff;
 }
 
-/* contador */
-
-.contador-romantico{
-margin-top:40px;
+@media (max-width: 600px) {
+    .text-box {
+        font-size: 16px;
+    }
 }
 
-.contador-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-gap:20px;
-max-width:500px;
-margin:auto;
+.contador-romantico {
+    text-align: center;
+    padding: 40px 20px;
 }
 
-.box{
-background:rgba(255,255,255,0.2);
-backdrop-filter:blur(10px);
-
-padding:20px;
-
-border-radius:15px;
-
-box-shadow:0 8px 20px rgba(0,0,0,0.4);
+.contador-romantico h2 {
+    margin-bottom: 25px;
 }
 
-.box span{
-font-size:32px;
-font-weight:bold;
-display:block;
+.contador-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-/* corações */
-
-.heart{
-position:fixed;
-top:-10px;
-color:#ff4d6d;
-font-size:20px;
-animation:fall linear forwards;
-z-index:9999;
+.box {
+    background: rgba(255, 118, 156, 0.15);
+    padding: 20px;
+    border-radius: 15px;
 }
 
-@keyframes fall{
-to{
-transform:translateY(110vh);
-opacity:0;
-}
-}
-
-/* celular */
-
-@media(max-width:600px){
-
-.container{
-margin:15px;
-padding:15px;
+.box span {
+    font-size: 28px;
+    font-weight: bold;
+    display: block;
 }
 
-.titulo3{
-font-size:26px;
+h1, h2, p {
+    color:rgb(0, 0, 0)
 }
 
-button{
-width:100%;
+@font-face {
+    font-family: kgt;
+    src: url(KGT.otf);
 }
 
-.text-box{
-font-size:15px;
-}
-
+.titulo3 {
+    text-align: center;
+    font-family: kgt;
 }
 
 </style>
@@ -192,12 +133,10 @@ font-size:15px;
 <body>
 
 <div class="container">
+    <h1 class="titulo3">Jesus, Maria Luiza & Glauber</h1>
 
-<h1 class="titulo3">Jesus, Maria Luiza & Glauber</h1>
-
-<div class="carousel">
-
-<img src="images/inicio.jpg" class="active">
+    <div class="carousel">
+        <img src="images/inicio.jpg" class="active">
         <img src="images/zero.JPG">
         <img src="images/nos (1).jpg">
         <img src="images/nos (10).JPG">
@@ -299,37 +238,28 @@ font-size:15px;
         <img src="images/nos (118).jpeg">
         <img src="images/nos (119).jpeg">
         <img src="images/nos (120).jpeg">
+    </div>
 
-</div>
+    <div class="buttons">
+        <button onclick="prevSlide()">Back/Vuelta</button>
+        <button onclick="nextSlide()">Next/Adelante</button>
+    </div>
 
-<div class="buttons">
-<button onclick="prevSlide()">⬅ Voltar</button>
-<button onclick="nextSlide()">➡ Próxima</button>
-</div>
-
-<br>
-
-<audio id="musica" autoplay loop>
-<source src="Meu Abrigo.mp3" type="audio/mpeg">
+    <audio id="musica" autoplay loop>
+    <source src="Meu Abrigo.mp3" type="audio/mpeg">
 </audio>
 
-<button onclick="tocarMusica()">🎵 Música</button>
+<button onclick="tocarMusica()">TOCAR A MÚSICA</button>
 
-<div class="text-box">
-
-<p>
-
-Mateus 6:33 <br><br>
-
+    <div class="text-box">
+        <p1>
+            Mateus 6:33 <br><br>
 Mas busquem em primeiro lugar o
 Reino de Deus e a sua justiça, 
-e todas estas coisas lhes serão acrescentadas.
+e todas estas coisas lhes serão acrescentadas.<br><br>
+--------------------<br><br>
 
-<br><br>--------------------<br><br>
-
-1Coríntios 13:4-7
-
-<br><br>
+1Coríntios 13:4-7<br><br>
 
 O amor é paciente e bondoso. O amor não
 arde em ciúmes, não se envaidece, não é
@@ -339,148 +269,97 @@ não se irrita, não se ressente do mal. O amor
 não se alegra com a injustiça, mas se alegra
 com a verdade. O amor tudo sofre, tudo crê, tudo
 espera, tudo suporta.
-
-</p>
-
-</div>
-
+        </p1>
+    </div>
 </div>
 
 <div class="contador-romantico">
+    <h2>Desde 29/03/2025 ❤️</h2>
 
-<h2>Desde 29/03/2025 ❤️</h2>
+    <div class="contador-grid">
+        <div class="box">
+            <span id="dias">0</span>
+            <p>Dias</p>
+        </div>
 
-<div class="contador-grid">
+        <div class="box">
+            <span id="horas">0</span>
+            <p>Horas</p>
+        </div>
 
-<div class="box">
-<span id="dias">0</span>
-<p>Dias</p>
-</div>
+        <div class="box">
+            <span id="minutos">0</span>
+            <p>Minutos</p>
+        </div>
 
-<div class="box">
-<span id="horas">0</span>
-<p>Horas</p>
-</div>
-
-<div class="box">
-<span id="minutos">0</span>
-<p>Minutos</p>
-</div>
-
-<div class="box">
-<span id="segundos">0</span>
-<p>Segundos</p>
-</div>
-
-</div>
-
+        <div class="box">
+            <span id="segundos">0</span>
+            <p>Segundos</p>
+        </div>
+    </div>
 </div>
 
 <script>
+let currentIndex = 0;
+const slides = document.querySelectorAll(".carousel img");
 
-/* carrossel */
-
-let currentIndex=0;
-
-const slides=document.querySelectorAll(".carousel img");
-
-function showSlide(index){
-
-slides.forEach(slide=>slide.classList.remove("active"));
-
-slides[index].classList.add("active");
-
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
 }
 
-function nextSlide(){
-
-currentIndex=(currentIndex+1)%slides.length;
-
-showSlide(currentIndex);
-
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
 }
 
-function prevSlide(){
-
-currentIndex=(currentIndex-1+slides.length)%slides.length;
-
-showSlide(currentIndex);
-
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
 }
 
-setInterval(nextSlide,8000);
+// Carrossel automático
+setInterval(nextSlide, 8000);
 
-/* contador */
 
-const dataInicial=new Date("2025-03-29T00:00:00").getTime();
 
-function atualizarContador(){
+</script>
 
-const agora=new Date().getTime();
+<script>
+const dataInicial = new Date("2025-03-29T00:00:00").getTime();
 
-const diferenca=agora-dataInicial;
+function atualizarContador() {
+    const agora = new Date().getTime();
+    const diferenca = agora - dataInicial;
 
-if(diferenca<0) return;
+    if (diferenca < 0) return;
 
-const segundosTotais=Math.floor(diferenca/1000);
+    const segundosTotais = Math.floor(diferenca / 1000);
+    const dias = Math.floor(segundosTotais / (60 * 60 * 24));
+    const horas = Math.floor((segundosTotais % (60 * 60 * 24)) / (60 * 60));
+    const minutos = Math.floor((segundosTotais % (60 * 60)) / 60);
+    const segundos = segundosTotais % 60;
 
-const dias=Math.floor(segundosTotais/(60*60*24));
-
-const horas=Math.floor((segundosTotais%(60*60*24))/(60*60));
-
-const minutos=Math.floor((segundosTotais%(60*60))/60);
-
-const segundos=segundosTotais%60;
-
-document.getElementById("dias").textContent=dias;
-document.getElementById("horas").textContent=horas;
-document.getElementById("minutos").textContent=minutos;
-document.getElementById("segundos").textContent=segundos;
-
+    document.getElementById("dias").textContent = dias;
+    document.getElementById("horas").textContent = horas;
+    document.getElementById("minutos").textContent = minutos;
+    document.getElementById("segundos").textContent = segundos;
 }
 
-setInterval(atualizarContador,1000);
-
+setInterval(atualizarContador, 1000);
 atualizarContador();
+</script>
 
-/* musica */
+<script>
+var musica = document.getElementById("musica");
 
-var musica=document.getElementById("musica");
-
-function tocarMusica(){
-
-if(musica.paused){
-musica.play();
-}else{
-musica.pause();
+function tocarMusica() {
+    if (musica.paused) {
+        musica.play();
+    } else {
+        musica.pause();
+    }
 }
-
-}
-
-/* corações */
-
-function criarCoracao(){
-
-const heart=document.createElement("div");
-
-heart.classList.add("heart");
-
-heart.innerHTML="❤";
-
-heart.style.left=Math.random()*100+"vw";
-
-heart.style.animationDuration=(Math.random()*3+3)+"s";
-
-document.body.appendChild(heart);
-
-setTimeout(()=>{
-heart.remove();
-},5000);
-
-}
-
-setInterval(criarCoracao,400);
-
 </script>
 
 </body>
