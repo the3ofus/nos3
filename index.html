@@ -323,6 +323,62 @@ font-size:15px;
 
 <button onclick="tocarMusica()">🎵 Música</button>
 
+<body>
+
+<div class="container">
+    <h1>Contagem para o nosso grande dia! <br>Se Deus quiser! <br>💍📖  / 👰‍♀️​🕇🤵🏻‍♂️</h1>
+
+    <div class="timer">
+        <div class="box">
+            <div id="days" class="number">0</div>
+            <div class="label">Dias</div>
+        </div>
+        <div class="box">
+            <div id="hours" class="number">0</div>
+            <div class="label">Horas</div>
+        </div>
+        <div class="box">
+            <div id="minutes" class="number">0</div>
+            <div class="label">Minutos</div>
+        </div>
+        <div class="box">
+            <div id="seconds" class="number">0</div>
+            <div class="label">Segundos</div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Data alvo (ano, mês-1, dia)
+const targetDate = new Date(2027, 2, 25, 0, 0, 0);
+
+function updateCountdown() {
+    const now = new Date();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+        document.querySelector(".timer").innerHTML = "Chegou o grande dia! 🎉";
+        return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+}
+
+// Atualiza a cada 1 segundo
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+
+</body>
+
 <div class="text-box">
 
 
@@ -514,8 +570,6 @@ heart.remove();
 }
 
 setInterval(criarCoracao,400);
-
 </script>
-
 </body>
 </html>
